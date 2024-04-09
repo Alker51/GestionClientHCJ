@@ -3,6 +3,10 @@ function updateContent(langData) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         element.textContent = langData[key];
+
+        if(element.tagName == 'INPUT')
+            console.log('');
+            // changer le placeholder de l'input si present avec le search.S
     });
 }
 
@@ -22,7 +26,7 @@ async function changeLanguage(lang) {
 
 // Call updateContent() on page load
 window.addEventListener('DOMContentLoaded', async () => {
-    const userPreferredLanguage = localStorage.getItem('language') || 'en';
+    const userPreferredLanguage = localStorage.getItem('language') || 'fr';
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
 });

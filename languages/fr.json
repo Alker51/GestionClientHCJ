@@ -1,5 +1,6 @@
 {
     "title" : "Gestion Client",
-    "navitem_home" : "Acceuil",
-    "language" : "Langue"
+    "navitem_home" : "Accueil",
+    "language" : "Langue",
+    "search" :  "Recherche"
 }
