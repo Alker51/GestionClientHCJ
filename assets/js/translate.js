@@ -4,9 +4,10 @@ function updateContent(langData) {
         const key = element.getAttribute('data-i18n');
         element.textContent = langData[key];
 
-        if(element.tagName == 'INPUT')
-            console.log('');
-            // changer le placeholder de l'input si present avec le search.S
+        console.log(element.tagName == 'INPUT');
+        console.log(element.hasAttribute('placeholder'));
+        if(element.tagName == 'INPUT' && element.hasAttribute('placeholder'))
+            element.placeholder = langData[key];
     });
 }
 
