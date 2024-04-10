@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -29,7 +33,7 @@
             <div class="collapse navbar-collapse button-searchbar" id="navbarSupportedContent">
                 <ul class="nav nav-underline navbar">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html" data-i18n="navitem_home"></a>
+                        <a class="nav-link active" aria-current="page" href="index.php" data-i18n="navitem_home"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -40,12 +44,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="index.html" onclick="changeLanguage('en')">
+                                <a href="index.php" onclick="changeLanguage('en')">
                                     <img src="https://flagsapi.com/US/flat/32.png">
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html" onclick="changeLanguage('fr')">
+                                <a href="index.php" onclick="changeLanguage('fr')">
                                     <img src="https://flagsapi.com/FR/flat/32.png">
                                 </a>
                             </li>
