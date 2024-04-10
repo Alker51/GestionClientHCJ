@@ -36,7 +36,13 @@
                         <a class="nav-link active" aria-current="page" href="index.php" data-i18n="navitem_home"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">test</a>
+                        <a class="nav-link" href="#">Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Commandes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sites</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -67,7 +73,7 @@
 </body>
 
 <footer>
-    
+
 </footer>
 
 </html>

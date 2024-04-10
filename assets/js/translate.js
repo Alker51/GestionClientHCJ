@@ -9,6 +9,8 @@ function updateContent(langData) {
         if(element.tagName == 'INPUT' && element.hasAttribute('placeholder'))
             element.placeholder = langData[key];
     });
+
+    // html change in lang from selected
 }
 
 // Function to set the language preference
