@@ -35,8 +35,19 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.php" data-i18n="navitem_home"></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Clients</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Clients
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item custom-item">
+                                <a href="index.php" data-i18n="list"></a>
+                            </li>
+                            <li class="dropdown-item custom-item">
+                                <a href="index.php" data-i18n="add"></a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Commandes</a>
@@ -49,12 +60,12 @@
                             aria-expanded="false" data-i18n="language">
                         </a>
                         <ul class="dropdown-menu">
-                            <li>
+                            <li class="dropdown-item">
                                 <a href="index.php" onclick="changeLanguage('en')">
                                     <img src="https://flagsapi.com/US/flat/32.png">
                                 </a>
                             </li>
-                            <li>
+                            <li class="dropdown-item">
                                 <a href="index.php" onclick="changeLanguage('fr')">
                                     <img src="https://flagsapi.com/FR/flat/32.png">
                                 </a>

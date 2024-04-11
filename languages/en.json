@@ -2,5 +2,7 @@
     "title" : "Customer Management",
     "navitem_home" : "Home",
     "language" : "Language",
-    "search" :  "Search"
+    "search" :  "Search",
+    "add" : "Add",
+    "list" : "List"
 }
