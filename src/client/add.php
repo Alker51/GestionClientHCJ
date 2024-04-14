@@ -11,17 +11,17 @@
     <title data-i18n="title"></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link href="./assets/style/main.css" rel="stylesheet" />
+    <link href="../../assets/style/main.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="./assets/js/translate.js" type="text/javascript"></script>
+    <script src="../../assets/js/translate.js" type="text/javascript"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.php" data-i18n="title">
+            <a class="navbar-brand" href="../../index.php" data-i18n="title">
                 <img src="https://ui-avatars.com/api/?name=Gestion+Client&length=2&rounded=true&background=870e0e&color=ffffff"
                     alt="Gestion Client" width="30" height="30" class="d-inline-block align-text-top" />
             </a>
@@ -44,8 +44,8 @@
                             <li class="dropdown-item custom-item">
                                 <a href="index.php" data-i18n="list"></a>
                             </li>
-                            <li class="dropdown-item custom-item">
-                                <a href="./src/client/add.php" data-i18n="add"></a>
+                            <li class="dropdown-item custom-item disabled">
+                                <a href="add.php" data-i18n="add"></a>
                             </li>
                         </ul>
                     </li>
@@ -81,10 +81,15 @@
             </div>
         </div>
     </nav>
+    <h1>
+        Ajout d'un client
+    </h1>
+    <form>
+    </form>
+    <footer>
+
+    </footer>
 </body>
 
-<footer>
-
-</footer>
 
 </html>

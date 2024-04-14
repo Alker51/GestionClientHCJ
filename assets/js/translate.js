@@ -36,6 +36,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 // Function to fetch language data
 async function fetchLanguageData(lang) {
-    const response = await fetch(`languages/${lang}.json`);
+    const response = await fetch(location.origin + `/languages/${lang}.json`);
     return response.json();
 }
