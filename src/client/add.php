@@ -21,9 +21,10 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../../index.php" data-i18n="title">
+            <a class="navbar-brand" href="/index.php">
                 <img src="https://ui-avatars.com/api/?name=Gestion+Client&length=2&rounded=true&background=870e0e&color=ffffff"
                     alt="Gestion Client" width="30" height="30" class="d-inline-block align-text-top" />
+                <p data-i18n="title"></p>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -33,7 +34,7 @@
             <div class="collapse navbar-collapse button-searchbar" id="navbarSupportedContent">
                 <ul class="nav nav-underline navbar">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php" data-i18n="navitem_home"></a>
+                        <a class="nav-link" aria-current="page" href="/index.php" data-i18n="navitem_home"></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -42,10 +43,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item custom-item">
-                                <a href="index.php" data-i18n="list"></a>
+                                <a href="/index.php" data-i18n="list"></a>
                             </li>
-                            <li class="dropdown-item custom-item disabled">
-                                <a href="add.php" data-i18n="add"></a>
+                            <li class="dropdown-item custom-item active">
+                                <a href="/src/client/add.php" data-i18n="add"></a>
                             </li>
                         </ul>
                     </li>
@@ -61,12 +62,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
-                                <a href="index.php" onclick="changeLanguage('en')">
+                                <a href="/index.php" onclick="changeLanguage('en')">
                                     <img src="https://flagsapi.com/US/flat/32.png">
                                 </a>
                             </li>
                             <li class="dropdown-item">
-                                <a href="index.php" onclick="changeLanguage('fr')">
+                                <a href="/index.php" onclick="changeLanguage('fr')">
                                     <img src="https://flagsapi.com/FR/flat/32.png">
                                 </a>
                             </li>
@@ -82,7 +83,6 @@
         </div>
     </nav>
     <h1>
-        Ajout d'un client
     </h1>
     <form>
     </form>
