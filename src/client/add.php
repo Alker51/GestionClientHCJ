@@ -1,5 +1,9 @@
 <?php
-
+require('./controller/Client.php');
+if(isset($_POST['submit']))
+{
+   // call function for save customer.
+}
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +87,8 @@
         </div>
     </nav>
     <h1 data-i18n="add_title"></h1>
-    <form>
+    <form action="/controller/Client.php">
+        
     </form>
     <footer>
 
