@@ -4,5 +4,6 @@
     "language" : "Langue",
     "search" :  "Recherche",
     "add" : "Ajouter",
-    "list" : "Liste"
+    "list" : "Liste",
+    "add_title" : "Ajouter un client"
 }

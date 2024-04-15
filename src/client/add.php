@@ -82,8 +82,7 @@
             </div>
         </div>
     </nav>
-    <h1>
-    </h1>
+    <h1 data-i18n="add_title"></h1>
     <form>
     </form>
     <footer>

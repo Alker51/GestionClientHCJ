@@ -4,5 +4,6 @@
     "language" : "Language",
     "search" :  "Search",
     "add" : "Add",
-    "list" : "List"
+    "list" : "List",
+    "add_title" : "Add a customer"
 }
