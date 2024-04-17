@@ -5,5 +5,18 @@
     "search" :  "Recherche",
     "add" : "Ajouter",
     "list" : "Liste",
-    "add_title" : "Ajouter un client"
+    "add_title" : "Ajouter un client",
+    "firstname" : "Prénom :",
+    "lastname" : "Nom :",
+    "phone" : "Télephone :",
+    "email" : "Email :",
+    "adress" : "N° et nom de rue :",
+    "city" : "Ville :",
+    "country" : "Pays :",
+    "username" : "Nom d'utilisateur :",
+    "pass" : "Mot de passe :",
+    "checkPass" : "Vérifier le mot de passe :",
+    "avatar" : "Url de l'avatar :",
+    "submit" : "Envoyer",
+    "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
 }

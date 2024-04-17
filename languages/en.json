@@ -5,5 +5,19 @@
     "search" :  "Search",
     "add" : "Add",
     "list" : "List",
-    "add_title" : "Add a customer"
+    "add_title" : "Add a customer",
+    "firstname" : "First name :",
+    "lastname" : "Last name :",
+    "phone" : "Phone number :",
+    "email" : "Email :",
+    "adress" : "N° et street name :",
+    "city" : "City :",
+    "country" : "Country :",
+    "username" : "Username :",
+    "pass" : "Password :",
+    "checkPass" : "Check password :",
+    "avatar" : "Avatar url :",
+    "submit" : "Create",
+    "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+
 }

@@ -1,7 +1,8 @@
 <?php
-require('./controller/Client.php');
+require($_SERVER['DOCUMENT_ROOT'].'/controller/Client.php');
 if(isset($_POST['submit']))
 {
+    $client = new Client($_POST);
    // call function for save customer.
 }
 ?>
@@ -87,8 +88,61 @@ if(isset($_POST['submit']))
         </div>
     </nav>
     <h1 data-i18n="add_title"></h1>
-    <form action="/controller/Client.php">
-        
+    <form action="/controller/Client.php"  method="post">
+        <label>
+            <p data-i18n="firstname"></p>
+            <input type="text" name="firstname">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="lastname"></p>
+            <input type="text" name="lastname">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="phone"></p>
+            <input type="tel" name="phone">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="email"></p>
+            <input type="email" name="email">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="adress"></p>
+            <input type="text" name="adress">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="city"></p>
+            <input type="text" name="city">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="country"></p>
+            <input type="text" name="country">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="username"></p>
+            <input type="text" name="username">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="pass"></p>
+            <input type="password" name="pass">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="avatar"></p>
+            <input type="url" name="avatar">
+        </label>
+        <br>
+        <label>
+            <p data-i18n="submit"></p>
+            <input type="submit" value="submit">
+        </label>
     </form>
     <footer>
 

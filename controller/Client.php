@@ -13,32 +13,27 @@ class Client {
     private string $rib;
     private string $bic;
 
-    public function __construct (
-        string $firstname, string $lastname,
-        string $email, string $phone,
-        string $adress, string $city,
-        string $country, string $username,
-        string $pass, string $avatar
-    ){
-        $this->firstname = $firstname;
-        $this->lastname = $lastname;
-        $this->email = $email;
-        $this->phone = $phone;
-        $this->adress = $adress;
-        $this->city = $city;
-        $this->country = $country;
-        $this->username = $username;
-        $this->pass = $pass;
-        $this->avatar = $avatar;
+    public function __construct (array $clientDatas) {
+        $this->firstname = $clientDatas['firstname'];
+        $this->lastname = $clientDatas['lastname'];
+        $this->email = $clientDatas['email'];
+        $this->phone = $clientDatas['phone'];
+        $this->adress = $clientDatas['adress'];
+        $this->city = $clientDatas['city'];
+        $this->country = $clientDatas['country'];
+        $this->username = $clientDatas['username'];
+        $this->pass = $clientDatas['pass'];
+        $this->avatar = $clientDatas['avatar'];
     }
 
-    public function createCustomer() : bool{
+    public function createCustomer(Client $newClient) : bool{
         $pdo = new PDO("mysql:host=localhost;dbname=gestion_client", 'Alker51', 'AlkerTestDev');
         $pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
 
         $unbufferedResult = $pdo->query("SELECT email FROM City");
         foreach ($unbufferedResult as $row) {
             echo $row['email'] . PHP_EOL;
+            echo $newClient . PHP_EOL;
         }
 
         return true;
