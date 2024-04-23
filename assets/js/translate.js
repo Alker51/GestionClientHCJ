@@ -4,8 +4,8 @@ function updateContent(langData) {
         const key = element.getAttribute('data-i18n');
         element.textContent = langData[key];
 
-        console.log(element.tagName == 'INPUT');
-        console.log(element.hasAttribute('placeholder'));
+        // console.log(element.tagName == 'INPUT');
+        // console.log(element.hasAttribute('placeholder'));
         if(element.tagName == 'INPUT' && element.hasAttribute('placeholder'))
             element.placeholder = langData[key];
     });

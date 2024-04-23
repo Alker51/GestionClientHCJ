@@ -15,7 +15,7 @@
     "country" : "Pays :",
     "username" : "Nom d'utilisateur :",
     "pass" : "Mot de passe :",
-    "checkPass" : "Vérifier le mot de passe :",
+    "passCheck" : "Vérifier le mot de passe :",
     "avatar" : "Url de l'avatar :",
     "submit" : "Envoyer",
     "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
