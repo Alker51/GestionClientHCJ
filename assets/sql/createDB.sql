@@ -1,5 +1,5 @@
 CREATE TABLE client (
-    id INT PRIMARY KEY,
+    id INT NOT NULL AUTO_INCREMENT,
     firstname VARCHAR(255),
     lastname VARCHAR(255),
     email VARCHAR(255),
@@ -8,8 +8,9 @@ CREATE TABLE client (
     city VARCHAR(255),
     country VARCHAR(255),
     username VARCHAR(255),
-    password VARCHAR(255),
-    avatar BLOB,
+    pass VARCHAR(255),
+    avatar VARCHAR(2000),
     RIB VARCHAR(255),
-    BIC VARCHAR(255)
+    BIC VARCHAR(255),
+    PRIMARY KEY (id)
 );
