@@ -1,40 +1,49 @@
 <?php
 class Client {
-    public string $firstname;
-    public string $lastname;
-    public string $email;
-    public string $phone;
-    public string $adress;
-    public string $city;
-    public string $country;
-    public string $username;
-    public string $pass;
-    public string $avatar;
-    private string $rib;
-    private string $bic;
+    public const DB_HOST = "localhost";
+    public const DB_USER= "Alker51";
+    public const DB_PASS = "AlkerTestDev";
+    public const DB_NAME = "gestion_client";
 
-    public function __construct (array $clientDatas) {
-        $this->firstname = $clientDatas['firstname'];
-        $this->lastname = $clientDatas['lastname'];
-        $this->email = $clientDatas['email'];
-        $this->phone = $clientDatas['phone'];
-        $this->adress = $clientDatas['adress'];
-        $this->city = $clientDatas['city'];
-        $this->country = $clientDatas['country'];
-        $this->username = $clientDatas['username'];
-        $this->pass = $clientDatas['pass'];
-        $this->avatar = $clientDatas['avatar'];
-    }
-
-    public function createCustomer(Client $newClient) : bool{
-        $pdo = new PDO("mysql:host=localhost;dbname=gestion_client", 'Alker51', 'AlkerTestDev');
-        $pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
-
-        $unbufferedResult = $pdo->query("SELECT email FROM City");
-        foreach ($unbufferedResult as $row) {
-            echo $row['email'] . PHP_EOL;
-            echo $newClient . PHP_EOL;
+    function createCustomer(array $newClient) : bool {
+        if($newClient['pass'] !== $newClient['passCheck']){
+            return false;
         }
+
+        $conn = new mysqli(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
+
+        if ($conn->connect_error) {
+            die("Connexion échouée: " . $conn->connect_error);
+        }
+
+        $username = $newClient['username'];
+        $firstname = $newClient['firstname'];
+        $lastname = $newClient['lastname'];
+        $email = $newClient['email'];
+        $phone = $newClient['phone'];
+        $adress = $newClient['adress'];
+        $city = $newClient['city'];
+        $country = $newClient['country'];
+        $username = $newClient['username'];
+        $pass = password_hash($$newClient['pass'], PASSWORD_DEFAULT);
+        if(!empty($newClient['avatar'])) {
+            $avatar = $newClient['avatar'];
+        } else {
+            $avatar = "https://ui-avatars.com/api/?name=".$username ."&length=2&rounded=true&background=random";
+        }
+
+        $stmt = $conn->prepare("INSERT INTO client (username, firstname, lastname, email, phone, adress, city, country, pass, avatar) 
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+        if (!$stmt) {
+            die("Échec de la préparation de la requête: " . $conn->error);
+        }
+
+        $stmt->bind_param("ssssssssss", $username, $firstname, $lastname, $email, $phone, $adress, $city, $country, $pass, $avatar);
+        
+        $result = $stmt->execute();
+        $stmt->close();
+        $conn->close();
 
         return true;
     }

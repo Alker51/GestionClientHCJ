@@ -1,9 +1,10 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/controller/Client.php');
-if(isset($_POST['submit']))
+
+if(isset($_POST['username']))
 {
-    $client = new Client($_POST);
-   // call function for save customer.
+    $client = new Client();
+    $result = $client->createCustomer($_POST);
 }
 ?>
 
@@ -88,50 +89,54 @@ if(isset($_POST['submit']))
         </div>
     </nav>
     <h1 data-i18n="add_title"></h1>
-    <form action="/controller/Client.php"  method="post">
+    <form action=""  method="post">
         <label>
             <p data-i18n="firstname"></p>
-            <input type="text" name="firstname">
+            <input type="text" name="firstname" required>
         </label>
         <br>
         <label>
             <p data-i18n="lastname"></p>
-            <input type="text" name="lastname">
+            <input type="text" name="lastname" required>
         </label>
         <br>
         <label>
             <p data-i18n="phone"></p>
-            <input type="tel" name="phone">
+            <input type="tel" name="phone" required>
         </label>
         <br>
         <label>
             <p data-i18n="email"></p>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
         </label>
         <br>
         <label>
             <p data-i18n="adress"></p>
-            <input type="text" name="adress">
+            <input type="text" name="adress" required>
         </label>
         <br>
         <label>
             <p data-i18n="city"></p>
-            <input type="text" name="city">
+            <input type="text" name="city" required>
         </label>
         <br>
         <label>
             <p data-i18n="country"></p>
-            <input type="text" name="country">
+            <input type="text" name="country" required>
         </label>
         <br>
         <label>
             <p data-i18n="username"></p>
-            <input type="text" name="username">
+            <input type="text" name="username" required>
         </label>
         <br>
         <label>
             <p data-i18n="pass"></p>
-            <input type="password" name="pass">
+            <input type="password" name="pass" required>
+        </label>
+        <label>
+            <p data-i18n="passCheck"></p>
+            <input type="password" name="passCheck" required>
         </label>
         <br>
         <label>
@@ -141,9 +146,13 @@ if(isset($_POST['submit']))
         <br>
         <label>
             <p data-i18n="submit"></p>
-            <input type="submit" value="submit">
+            <input type="submit">
         </label>
     </form>
+
+    <?php if (isset($result)) { ?>
+        <h1> Result: <?php echo $result ?></h1>
+    <?php } ?>
     <footer>
 
     </footer>
