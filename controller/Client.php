@@ -5,16 +5,38 @@ class Client {
     public const DB_PASS = "AlkerTestDev";
     public const DB_NAME = "gestion_client";
 
-    function createCustomer(array $newClient) : bool {
-        if($newClient['pass'] !== $newClient['passCheck']){
-            return false;
-        }
-
+    function initDB() : mysqli {
         $conn = new mysqli(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
 
         if ($conn->connect_error) {
             die("Connexion échouée: " . $conn->connect_error);
         }
+
+        return $conn;
+    }
+
+    function listCustomer() {
+        $conn = $this-> initDB();
+
+        $stmt = $conn->query("SELECT username, email FROM client");
+
+        if (!$stmt) {
+            die("Échec de la préparation de la requête: " . $conn->error);
+        }
+
+        $result = $stmt->fetch_all(MYSQLI_NUM);
+        $stmt->close();
+        $conn->close();
+
+        return $result;
+    }
+
+    function createCustomer(array $newClient) : bool {
+        if($newClient['pass'] !== $newClient['passCheck']){
+            return false;
+        }
+
+        $conn = $this->initDB();
 
         $username = $newClient['username'];
         $firstname = $newClient['firstname'];
@@ -26,6 +48,7 @@ class Client {
         $country = $newClient['country'];
         $username = $newClient['username'];
         $pass = password_hash($$newClient['pass'], PASSWORD_DEFAULT);
+
         if(!empty($newClient['avatar'])) {
             $avatar = $newClient['avatar'];
         } else {

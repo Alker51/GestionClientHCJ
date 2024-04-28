@@ -20,4 +20,14 @@
   display: none;
 }
 
+.customer-table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-radius: 10px;
+}
+.customer-table * {
+  text-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */
