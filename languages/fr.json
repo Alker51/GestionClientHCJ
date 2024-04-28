@@ -6,6 +6,7 @@
     "add" : "Ajouter",
     "list" : "Liste",
     "add_title" : "Ajouter un client",
+    "client_index_title" : "Liste des clients",
     "firstname" : "Prénom :",
     "lastname" : "Nom :",
     "phone" : "Télephone :",
@@ -18,5 +19,7 @@
     "passCheck" : "Vérifier le mot de passe :",
     "avatar" : "Url de l'avatar :",
     "submit" : "Envoyer",
-    "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+    "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters",
+    "edit_button" : "Editer",
+    "delete_button" : "Supprimer"
 }
