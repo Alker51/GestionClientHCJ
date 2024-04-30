@@ -31,18 +31,24 @@ require($_SERVER['DOCUMENT_ROOT'].'/controller/Html.php');
     <?php if (isset($result)) { ?>
         <table class="customer-table">
             <thead>
-                <th>username</th>
-                <th>e-mail</th>
+                <th>Avatar</th>
+                <th>Username</th>
+                <th>E-mail</th>
                 <th></th>
             </thead>
             <tbody>
             <?php foreach ($result as $client) {?>
                 <tr>
-                    <td><?php echo $client[0] ?></td>
-                    <td><?php echo $client[1] ?></td>
+                    <td><img src="<?php echo $client[10] ?>" width="50%" alt="avatar user"></td>
+                    <td><?php echo $client[8] ?></td>
+                    <td><?php echo $client[3] ?></td>
                     <td>
-                        <button type="button" class="btn btn-outline-primary" data-i18n="edit_button"></button>
-                        <button type="button" class="btn btn-outline-danger" data-i18n="delete_button"></button>
+                        <a href="./edit.php?id=<?php echo $client[0] ?>">
+                            <button type="button" class="btn btn-outline-primary" data-i18n="edit_button"></button>
+                        </a>
+                        <a href="#">
+                            <button type="button" class="btn btn-outline-danger" data-i18n="delete_button"></button>
+                        </a>
                     </td>
                 </tr>
             <?php } ?>

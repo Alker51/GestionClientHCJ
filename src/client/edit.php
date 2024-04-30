@@ -4,10 +4,15 @@ require($_SERVER['DOCUMENT_ROOT'].'/controller/Html.php');
 
 $html = new Html();
 
-if(isset($_POST['username'])) {
+if(!isset($_GET['id'])) {
+    
+} else {
     $client = new Client();
-    $result = $client->createCustomer($_POST);
+    $result = $client->getCustomerData($_GET['id']);
 }
+
+if(isset($_POST['state']))
+    $client->editCustomer($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -30,53 +35,54 @@ if(isset($_POST['username'])) {
     <?php echo $html->displayNavbar();?>
     <h1 data-i18n="add_title"></h1>
     <form action=""  method="post">
+        <input type="hidden" name="state" value="edited">
         <label>
             <p data-i18n="firstname"></p>
-            <input type="text" name="firstname" required>
+            <input type="text" name="firstname">
         </label>
         <br>
         <label>
             <p data-i18n="lastname"></p>
-            <input type="text" name="lastname" required>
+            <input type="text" name="lastname">
         </label>
         <br>
         <label>
             <p data-i18n="phone"></p>
-            <input type="tel" name="phone" required>
+            <input type="tel" name="phone">
         </label>
         <br>
         <label>
             <p data-i18n="email"></p>
-            <input type="email" name="email" required>
+            <input type="email" name="email">
         </label>
         <br>
         <label>
             <p data-i18n="adress"></p>
-            <input type="text" name="adress" required>
+            <input type="text" name="adress">
         </label>
         <br>
         <label>
             <p data-i18n="city"></p>
-            <input type="text" name="city" required>
+            <input type="text" name="city">
         </label>
         <br>
         <label>
             <p data-i18n="country"></p>
-            <input type="text" name="country" required>
+            <input type="text" name="country">
         </label>
         <br>
         <label>
             <p data-i18n="username"></p>
-            <input type="text" name="username" required>
+            <input type="text" name="username">
         </label>
         <br>
         <label>
             <p data-i18n="pass"></p>
-            <input type="password" name="pass" required>
+            <input type="password" name="pass">
         </label>
         <label>
             <p data-i18n="passCheck"></p>
-            <input type="password" name="passCheck" required>
+            <input type="password" name="passCheck">
         </label>
         <br>
         <label>
@@ -91,7 +97,7 @@ if(isset($_POST['username'])) {
     </form>
 
     <?php if (isset($result)) { ?>
-        <h1> Result: <?php echo $result ?></h1>
+        <h1> Result: <?php var_dump($result) ?></h1>
     <?php } ?>
     <footer>
 

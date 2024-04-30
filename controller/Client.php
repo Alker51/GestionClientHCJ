@@ -15,10 +15,10 @@ class Client {
         return $conn;
     }
 
-    function listCustomer() {
+    function getCustomerData(int $id) {
         $conn = $this-> initDB();
 
-        $stmt = $conn->query("SELECT username, email FROM client");
+        $stmt = $conn->query("SELECT * FROM client WHERE id = " . $id);
 
         if (!$stmt) {
             die("Échec de la préparation de la requête: " . $conn->error);
@@ -29,6 +29,26 @@ class Client {
         $conn->close();
 
         return $result;
+    }
+
+    function listCustomer() {
+        $conn = $this-> initDB();
+
+        $stmt = $conn->query("SELECT * FROM client");
+
+        if (!$stmt) {
+            die("Échec de la préparation de la requête: " . $conn->error);
+        }
+
+        $result = $stmt->fetch_all(MYSQLI_NUM);
+        $stmt->close();
+        $conn->close();
+
+        return $result;
+    }
+
+    function editCustomer(array $newData) {
+        
     }
 
     function createCustomer(array $newClient) : bool {
