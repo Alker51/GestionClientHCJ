@@ -25,5 +25,9 @@
     "submit" : "Envoyer",
     "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters",
     "edit_button" : "Editer",
-    "delete_button" : "Supprimer"
+    "delete_button" : "Supprimer",
+    "passField" : "Mot de passe",
+    "passConfirm" : "Confirmer le mot de passe",
+    "show" : "AFFICHER",
+    "hide" : "MASQUER"
 }

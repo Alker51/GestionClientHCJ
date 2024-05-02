@@ -21,16 +21,14 @@ if(isset($_POST['id']))
 <head>
     <?php echo $html->displayHead('../../assets/'); ?>
     <link href="../../assets/style/stylePass.css" rel="stylesheet" />
-    <script src="../../assets/js/scriptPass.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <h1 data-i18n="edit_pass"></h1>
     <div class="form-container">
         <form id="form">
             <div class="input-container">
                 <input type="password" id="password" aria-describedby="requirements" required />
-                <label for="password">Password</label>
+                <label for="password" data-i18n="passField"></label>
                 <button class="show-password" id="show-password" type="button" role="switch" aria-label="Show password" aria-checked="false">Show</button>
             </div>
 
@@ -44,7 +42,7 @@ if(isset($_POST['id']))
 
             <div class="input-container">
                 <input type="password" id="confirm-password" required />
-                <label for="confirm-password">Confirm password</label>
+                <label for="confirm-password" data-i18n="passConfirm"></label>
             </div>
 
             <div class="password-requirements">
@@ -62,5 +60,5 @@ if(isset($_POST['id']))
     </footer>
 </body>
 
-
+<script src="../../assets/js/scriptPass.js" type="text/javascript" defer></script>
 </html>

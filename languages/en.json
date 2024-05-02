@@ -25,5 +25,9 @@
     "submit" : "Create",
     "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters",
     "edit_button" : "Edit",
-    "delete_button" : "Delete"
+    "delete_button" : "Delete",
+    "passField" : "Pass",
+    "passConfirm" : "Confirm pass",
+    "show" : "SHOW",
+    "hide" : "HIDE"
 }
