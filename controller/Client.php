@@ -48,7 +48,26 @@ class Client {
     }
 
     function editCustomer(array $newData) {
-        
+        $conn = $this->initDB();
+
+        $sql = 'UPDATE client SET ';
+
+        $sqlVal = '';
+        foreach ($newData as $key => $value) {
+            if($key !== 'id' && !empty($value)) {
+                if(!empty($sqlVal))
+                    $sqlVal .= ',';
+
+                $sqlVal .= $key . " = \"$value\"";
+            }
+        }
+
+        $sql .= $sqlVal . " WHERE id = " . $newData['id'] . ";";
+
+        $stmt = $conn->query($sql);
+        $conn->close();
+
+        return true;
     }
 
     function createCustomer(array $newClient) : bool {
