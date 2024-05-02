@@ -37,6 +37,9 @@ require($_SERVER['DOCUMENT_ROOT'].'/controller/Html.php');
                         <a href="./edit.php?id=<?php echo $client[0] ?>">
                             <button type="button" class="btn btn-outline-primary" data-i18n="edit_button"></button>
                         </a>
+                        <a href="./passwordEdit.php?id=<?php echo $client[0] ?>">
+                            <button type="button" class="btn btn-outline-danger" data-i18n="edit_pass"></button>
+                        </a>
                         <a href="#">
                             <button type="button" class="btn btn-outline-danger" data-i18n="delete_button"></button>
                         </a>

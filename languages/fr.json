@@ -7,6 +7,7 @@
     "list" : "Liste",
     "add_title" : "Ajouter un client",
     "edit_title" : "Editer un client",
+    "edit_pass" : "Changer de mot de passe",
     "client_index_title" : "Liste des clients",
     "firstname" : "Prénom :",
     "lastname" : "Nom :",
