@@ -6,6 +6,7 @@
     "add" : "Add",
     "list" : "List",
     "add_title" : "Add a customer",
+    "edit_title" : "Edit a customer",
     "client_index_title" : "List of customer",
     "firstname" : "First name :",
     "lastname" : "Last name :",

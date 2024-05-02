@@ -6,6 +6,7 @@
     "add" : "Ajouter",
     "list" : "Liste",
     "add_title" : "Ajouter un client",
+    "edit_title" : "Editer un client",
     "client_index_title" : "Liste des clients",
     "firstname" : "Prénom :",
     "lastname" : "Nom :",

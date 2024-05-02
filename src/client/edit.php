@@ -30,7 +30,7 @@ if(isset($_POST['id']))
         </script> ;
     <?php } ?>
     <?php echo $html->displayNavbar();?>
-    <h1 data-i18n="add_title"></h1>
+    <h1 data-i18n="edit_title"></h1>
     <form action=""  method="post">
         <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
         <label>
