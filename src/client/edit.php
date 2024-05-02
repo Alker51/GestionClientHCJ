@@ -63,22 +63,13 @@ if(isset($_POST['state']))
         </label>
         <br>
         <label>
-            <p data-i18n="username"></p>
-            <input type="text" name="username">
+            <p data-i18n="iban"></p>
+            <input type="text" name="iban">
         </label>
         <br>
         <label>
-            <p data-i18n="pass"></p>
-            <input type="password" name="pass">
-        </label>
-        <label>
-            <p data-i18n="passCheck"></p>
-            <input type="password" name="passCheck">
-        </label>
-        <br>
-        <label>
-            <p data-i18n="avatar"></p>
-            <input type="url" name="avatar">
+            <p data-i18n="bic"></p>
+            <input type="text" name="bic">
         </label>
         <br>
         <label>

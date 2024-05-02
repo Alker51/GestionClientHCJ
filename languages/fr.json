@@ -18,6 +18,8 @@
     "pass" : "Mot de passe :",
     "passCheck" : "Vérifier le mot de passe :",
     "avatar" : "Url de l'avatar :",
+    "iban" : "IBAN :",
+    "bic" : "BIC :",
     "submit" : "Envoyer",
     "passRequirement" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters",
     "edit_button" : "Editer",
